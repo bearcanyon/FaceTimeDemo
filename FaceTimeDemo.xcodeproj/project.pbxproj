@@ -14,6 +14,10 @@
 		5F7CC93A1CC8EF1D006784D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7CC9381CC8EF1D006784D6 /* LaunchScreen.storyboard */; };
 		5F7CC9451CC8EF1E006784D6 /* FaceTimeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7CC9441CC8EF1E006784D6 /* FaceTimeDemoTests.swift */; };
 		5F7CC9501CC8EF1E006784D6 /* FaceTimeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7CC94F1CC8EF1E006784D6 /* FaceTimeDemoUITests.swift */; };
+		5F7CC95F1CC90903006784D6 /* abe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7CC95D1CC90903006784D6 /* abe.jpg */; };
+		5F7CC9601CC90903006784D6 /* obama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7CC95E1CC90903006784D6 /* obama.jpg */; };
+		5F7CC9631CCA25E2006784D6 /* fujisan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7CC9611CCA25E2006784D6 /* fujisan.jpg */; };
+		5F7CC9641CCA25E2006784D6 /* jinja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7CC9621CCA25E2006784D6 /* jinja.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		5F7CC94B1CC8EF1E006784D6 /* FaceTimeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTimeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7CC94F1CC8EF1E006784D6 /* FaceTimeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTimeDemoUITests.swift; sourceTree = "<group>"; };
 		5F7CC9511CC8EF1E006784D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F7CC95D1CC90903006784D6 /* abe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abe.jpg; sourceTree = "<group>"; };
+		5F7CC95E1CC90903006784D6 /* obama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = obama.jpg; sourceTree = "<group>"; };
+		5F7CC9611CCA25E2006784D6 /* fujisan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fujisan.jpg; sourceTree = "<group>"; };
+		5F7CC9621CCA25E2006784D6 /* jinja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jinja.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 		5F7CC92E1CC8EF1D006784D6 /* FaceTimeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5F7CC9611CCA25E2006784D6 /* fujisan.jpg */,
+				5F7CC9621CCA25E2006784D6 /* jinja.jpg */,
+				5F7CC95D1CC90903006784D6 /* abe.jpg */,
+				5F7CC95E1CC90903006784D6 /* obama.jpg */,
 				5F7CC92F1CC8EF1D006784D6 /* AppDelegate.swift */,
 				5F7CC9311CC8EF1D006784D6 /* ViewController.swift */,
 				5F7CC9331CC8EF1D006784D6 /* Main.storyboard */,
@@ -231,6 +243,10 @@
 			files = (
 				5F7CC93A1CC8EF1D006784D6 /* LaunchScreen.storyboard in Resources */,
 				5F7CC9371CC8EF1D006784D6 /* Assets.xcassets in Resources */,
+				5F7CC9641CCA25E2006784D6 /* jinja.jpg in Resources */,
+				5F7CC9631CCA25E2006784D6 /* fujisan.jpg in Resources */,
+				5F7CC95F1CC90903006784D6 /* abe.jpg in Resources */,
+				5F7CC9601CC90903006784D6 /* obama.jpg in Resources */,
 				5F7CC9351CC8EF1D006784D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +498,7 @@
 				5F7CC9561CC8EF1E006784D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F7CC9571CC8EF1E006784D6 /* Build configuration list for PBXNativeTarget "FaceTimeDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +507,7 @@
 				5F7CC9591CC8EF1E006784D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F7CC95A1CC8EF1E006784D6 /* Build configuration list for PBXNativeTarget "FaceTimeDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +516,7 @@
 				5F7CC95C1CC8EF1E006784D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
