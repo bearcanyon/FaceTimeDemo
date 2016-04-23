@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     
     let backImage = "fujisan.jpg"
     let face1 = "abe.jpg"
-    let face1Address = "facetime-audio://j.a.r.n0405@gmail.com"
+    let face1Address = "facetime://j.a.r.n0405@gmail.com"
     let face2 = "obama.jpg"
+    let face2Address = "facetime://j.a.r.n0405@gmail.com"
     
     let backImageView = UIImageView()
     let maskView = UIView()
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         makeBackgroundImage()
         makeBackgroundMaskView()
         makeImageView(y: self.view.frame.height * 1 / 3, tag: 1, image: face1)
-//        makeImageView(y: self.view.frame.height * 2 / 3, tag: 2, image: face2)
+        makeImageView(y: self.view.frame.height * 2 / 3, tag: 2, image: face2)
     }
     
     func makeBackgroundImage() {
@@ -57,15 +58,21 @@ class ViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapImage(_:)))
         imageView.addGestureRecognizer(tap)
-        maskView.addSubview(imageView)
+        
+        self.view.addSubview(imageView)
     }
     
     func tapImage(sender: UITapGestureRecognizer) {
-        print("\(#function),\(#line)")
-        //UITapGestureRecognizer.superviewでは取れないので調べる
-        if let url = NSURL(string: face1Address) {
-            UIApplication.sharedApplication().openURL(url)
-            
+        let tag = sender.view?.tag
+        if tag == 1 {
+            if let url = NSURL(string: face1Address) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        } else if tag == 2 {
+            if let url = NSURL(string: face2Address) {
+                UIApplication.sharedApplication().openURL(url)
+            }
         }
     }
+    
 }
