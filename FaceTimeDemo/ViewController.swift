@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     
     let backImage = "jinja.jpg"
     
-    let name1 = "安倍晋三"
-    let face1 = "abe.jpg"
+    let name1 = "佐藤創"
+    let face1 = "sato.png"
     let face1Address = "facetime://j.a.r.n0405@gmail.com"
-    let name2 = "バラク・オバマ"
+    let name2 = "小宮山竜治"
     let face2 = "obama.jpg"
     let face2Address = "facetime://j.a.r.n0405@gmail.com"
     
