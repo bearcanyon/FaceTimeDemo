@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let backImage = "fujisan.jpg"
+    let backImage = "jinja.jpg"
+    
+    let name1 = "安倍晋三"
     let face1 = "abe.jpg"
     let face1Address = "facetime://j.a.r.n0405@gmail.com"
+    let name2 = "バラク・オバマ"
     let face2 = "obama.jpg"
     let face2Address = "facetime://j.a.r.n0405@gmail.com"
     
@@ -25,8 +28,20 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.grayColor()
         makeBackgroundImage()
         makeBackgroundMaskView()
-        makeImageView(y: self.view.frame.height * 1 / 3, tag: 1, image: face1)
-        makeImageView(y: self.view.frame.height * 2 / 3, tag: 2, image: face2)
+        makeImageView(y: self.view.frame.height * 1/3, tag: 1, image: face1, name: name1)
+        makeImageView(y: self.view.frame.height * 2/3, tag: 2, image: face2, name: name2)
+        makeTitleLabel()
+
+    }
+    func makeTitleLabel(){
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y: 30, width: self.view.frame.width, height: 100)
+        label.text = "ご用の方はどちらかのアイコンを\nタップしてください"
+        label.font = UIFont.boldSystemFontOfSize(20)
+        label.numberOfLines = 2
+        label.textAlignment = NSTextAlignment.Center
+        label.textColor = UIColor(white: 1, alpha: 0.8)
+        maskView.addSubview(label)
     }
     
     func makeBackgroundImage() {
@@ -40,10 +55,10 @@ class ViewController: UIViewController {
         maskView.frame = self.view.frame
         maskView.center = self.view.center
         maskView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-        backImageView.addSubview(maskView)
+        self.view.addSubview(maskView)
     }
     
-    func makeImageView(y y:CGFloat, tag:Int, image:String) {
+    func makeImageView(y y:CGFloat, tag:Int, image:String, name:String) {
         let imageView = UIImageView()
         imageView.frame.size = CGSizeMake(150, 150)
         imageView.center = CGPointMake(self.maskView.center.x,y)
@@ -60,6 +75,17 @@ class ViewController: UIViewController {
         imageView.addGestureRecognizer(tap)
         
         self.view.addSubview(imageView)
+        makeNameLabel(imageView, name: name)
+    }
+    
+    func makeNameLabel(image: UIImageView, name:String) {
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y: 100, width: image.frame.width, height: 20)
+        label.text = name
+        label.font = UIFont.boldSystemFontOfSize(15)
+        label.textAlignment = NSTextAlignment.Center
+        label.textColor = UIColor(white: 1, alpha: 0.8)
+        image.addSubview(label)
     }
     
     func tapImage(sender: UITapGestureRecognizer) {
